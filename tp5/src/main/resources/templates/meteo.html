@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:insert="~{fragments/nav_template::fragmentHead}"/>
+
+<body>
+
+<nav th:insert="~{fragments/nav_template::fragmentNav}"/>
+<h1 th:text="${'Le temps à '+meteo.getCity().getName()+' est :'}"/>
+<h3 th:text="${weatherHash.get(meteo.getForecast().getWeather())}"/>
+<h3 th:text="${'Aujourd&rsquo;hui il fera entre '+meteo.getForecast().getTmin()+' et '+meteo.getForecast().getTmax()+'°C'}"/>
+
+</body>
+</html>

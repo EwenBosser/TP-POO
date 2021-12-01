@@ -1,0 +1,9 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="~{fragments/nav_template::fragmentHead}"/>
+
+<body>
+<nav th:insert="~{fragments/nav_template::fragmentNav}"/>
+<p th:text="'Bonjour ' + ${nomTemplate} + ' !'"/>
+</body>
+</html>

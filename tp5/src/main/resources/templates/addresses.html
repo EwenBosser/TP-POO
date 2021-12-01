@@ -1,0 +1,16 @@
+<! DOCTYPE HTML >
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="~{fragments/nav_template::fragmentHead}"/>
+
+
+<body>
+
+<nav th:insert="~{fragments/nav_template::fragmentNav}"/>
+
+<h1>Les differentes adresses</h1>
+<ul th:each="address: ${allAdresses}">
+    <li th:text="${address.getContent()+' '+address.getAuteur()}"/>
+
+</ul>
+</body>
+</html>
